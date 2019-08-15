@@ -1,0 +1,38 @@
+[role=location]{
+    margin-top: 0;
+    h3{
+        margin-top: 2em;
+    }
+    .slick{
+        img{
+            max-width: 100%;
+        }
+        figure{
+            position: relative;
+            aside{
+                position: absolute;
+                color: #fff;
+                top: 0;
+                width: 40%;
+                padding: 8% 5%;
+                &.left{
+                    left: 0;
+                }
+                &.right{
+                    right: 0;
+                }
+                h4{
+                    font-size: vwxs(30,1920);
+                    font-weight: bold;
+                }
+                p{
+                    font-size: vwxs(16,1920);
+                }
+                ul{
+                    margin-top: 1em;
+                    font-size: vwxs(25,1920);
+                }
+            }
+        }
+    }
+}

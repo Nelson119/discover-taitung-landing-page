@@ -1,0 +1,95 @@
+[role=content]{
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-feature-settings: "liga";
+	font-style: normal;
+	text-rendering: optimizelegibility;
+	letter-spacing:0.5px;
+	word-spacing:0.5px;
+	overflow-x:hidden;
+	position:relative;
+	min-width: 320px;
+    background: $body-bg;
+	color: $text-color;
+    font-family: $font-family-sans-serif;
+    font-size: 18px;
+
+    @media screen and (max-width: 1000px) {
+        background: #04091D;
+        font-size: 16px;
+    }
+    >*{
+        opacity: 0;
+        filter: blur(5px);
+        position: relative;
+    }
+    &:before{
+        content: '';
+        @include SubItem();
+        background: $body-bg;
+    }
+
+    &.loaded{
+        >*{
+            opacity: inherit;
+            transition-duration: 0.5s;
+            filter: none;
+        }
+    }
+
+    figure[data-src], img[data-src]{
+        opacity: 0;
+        transition-duration: 0.3s;
+        &.loaded{
+            opacity: 1;
+        }
+    }
+    .viewport{
+        width: 1366px;
+        margin: 0 auto;
+        position: relative;
+        padding-top: 1px;
+        margin-top: -1px;
+        @media screen and (max-width: $screen-md) {
+            width: 100%;
+        }
+    }
+    .center{
+        width: 1215px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .section{
+        margin-top: 80px;
+        h3{
+            font-size: vwxs(33,1920);
+            line-height: 1.48;
+            font-weight: bold;
+            text-align: center;
+            width: 400px;
+            margin: 0 auto;
+            font-weight: 800;
+            border-bottom: 2px solid #e3db80;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            @media screen and (max-width: #{$screen-xs - 1}) {
+                font-size: vwxs(40, $screen-xs-num);
+                max-width: 100%;
+            }
+        }
+        h4{
+            font-size: vwxs(16,1920);
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        hr{
+            display: block;
+        }
+        >aside{
+            @media screen and (max-width: $screen-xs) {
+                max-width: 96%;
+                margin: 0 auto;
+            }
+        }
+    }
+}

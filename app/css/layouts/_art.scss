@@ -1,0 +1,23 @@
+[role=art]{
+    background: #f3f2ed;
+    margin-top: 0;
+    .viewport{
+        [class^=col]{
+            img{
+                max-width: 100%;
+            }
+            @media screen and (max-width: #{$screen-xs - 1}) {
+                margin-top: 1em;
+            }
+        }
+    }
+}
+
+.cover{
+    width: 100%;
+    padding-top: vwxs(153,1920);
+    margin-top: vwxs(-153,1920);
+    background: url(../img/background-2.png) center/ cover no-repeat;
+    position: relative;
+    z-index: 1;
+}

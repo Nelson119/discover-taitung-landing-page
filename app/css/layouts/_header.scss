@@ -1,0 +1,50 @@
+header {
+	position: fixed;
+	padding: vwxs(108,1920) 0;
+	width: 100%;
+	z-index: 10;
+    background: url(../img/kv.jpg) center/cover fixed;
+
+	&:hover{
+	}
+	@media screen and (max-width: 1000px) {
+	}
+	nav{
+		margin: 0 auto;
+		text-align: center;
+		a{
+			color: #fff;
+			font-size: 15px;
+			line-height: 22px;
+			position: relative;
+			&:before{
+				position: absolute;
+				bottom: 0px;
+				content: '';
+				width: 0;
+				left: 50%;
+				height: 1px;
+				background: #fff;
+			}
+			&:hover, &.active{
+				&:before{
+					width: 100%;
+					left: 0;
+					transition-duration: 0.3s;
+				}
+				
+				@media screen and (max-width: 1000px) {
+				}
+			}
+			@media screen and (max-width: 1000px) {
+			}
+		}
+		@media screen and (max-width: 1000px) {
+		}
+
+	}
+	&+[role=kv]{
+	}
+}
+&.fixed-menu{
+}
